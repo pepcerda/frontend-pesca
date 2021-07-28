@@ -1,0 +1,41 @@
+<div class="card text-white bg-success mb-3" >
+  <div class="card-header">Jornadas</div>
+  <div class="card-body">
+    <h5 class="card-title">Listado de Jornadas</h5>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Modalidad</th>
+          <th>Fecha_salida</th>
+          <th>Dirección viento</th>
+          <th>Fuerza viento</th>
+          <th>Fase lunar</th>
+          <th>Observaciones</th>
+          <th>Resultado</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jornada of jornadas">
+          <td>{{jornada.id}}</td>
+          <td>{{jornada.modalidad}}</td>
+          <td>{{jornada.fecha_salida}}</td>
+          <td>{{jornada.dir_viento}}</td>
+          <td>{{jornada.fuerza_viento}}</td>
+          <td>{{jornada.fase_luna}}</td>
+          <td>{{jornada.observaciones}}</td>
+          <td>{{jornada.resultado}}</td>
+          <td>{{jornada.duracion}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+  </div>
+</div>
