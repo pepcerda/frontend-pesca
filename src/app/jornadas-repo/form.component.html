@@ -1,0 +1,70 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body">
+    <form (ngSubmit) = "create()">
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Modalidad</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.modalidad" name="modalidad">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Fecha Salida</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.fechaSalida" name="fechaSalida">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Dirección Viento</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.dirViento" name="dirViento">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Fuerza Viento</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.fuerzaViento" name="fuerzaViento">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">FaseLuna</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.faseLuna" name="faseLuna">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Observaciones</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.observaciones" name="observaciones">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Resultado</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.resultado" name="resultado">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-2">Duración</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="jornada.duracion" name="duracion">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button">Crear</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
