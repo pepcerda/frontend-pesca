@@ -23,6 +23,19 @@ export class JornadaService {
   }
 
   create(jornada: Jornada) : Observable<Jornada> {
+    console.log(jornada)
     return this.http.post<Jornada>(this.urlEndPoint, jornada, {headers: this.httpHeaders})
+  }
+
+  getJornada(id: number): Observable<Jornada>{
+    return this.http.get<Jornada>(`${this.urlEndPoint}/${id}`)
+  }
+
+  update(jornada: Jornada): Observable<Jornada> {
+    return this.http.put<Jornada>(`${this.urlEndPoint}/${jornada.id}`, jornada, {headers: this.httpHeaders})
+  }
+
+  delete(id: number): Observable<Jornada> {
+    return this.http.delete<Jornada>(`${this.urlEndPoint}/${id}`, {headers:this.httpHeaders}); 
   }
 }

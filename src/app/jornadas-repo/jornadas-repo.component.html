@@ -1,4 +1,4 @@
-<div class="card text-white bg-success mb-3" >
+<div class="card text-white bg-aqua mb-3" >
   <div class="card-header">Jornadas</div>
   <div class="card-body">
     <h5 class="card-title">Listado de Jornadas</h5>
@@ -33,6 +33,12 @@
           <td>{{jornada.observaciones}}</td>
           <td>{{jornada.resultado}}</td>
           <td>{{jornada.duracion}}</td>
+          <td>
+            <button type = "button" name="editar" [routerLink]= "['/jornadas/form', jornada.id]" class="btn btn-primary">Editar</button>
+          </td>
+          <td>
+            <button type = "button" name="eliminar" (click)="delete(jornada)" class="btn btn-danger ">Eliminar</button>
+          </td>
         </tr>
       </tbody>
     </table>

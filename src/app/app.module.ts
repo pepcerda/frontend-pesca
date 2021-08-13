@@ -16,7 +16,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch:'full'},
   {path: 'jornadas', component: JornadasRepoComponent},
   {path: 'inicio', component: InicioComponent},
-  {path: 'jornadas/form', component: FormComponent}
+  {path: 'jornadas/form', component: FormComponent},
+  {path: 'jornadas/form/:id', component: FormComponent}
 ];
 
 @NgModule({
