@@ -51,4 +51,12 @@ export class FormComponent implements OnInit {
         })
     })
   }
+
+  public setModalidad(modalidad:string){
+    this.jornada.modalidad = modalidad;
+  }
+
+  public setDirViento(dirviento:string){
+    this.jornada.dirViento = dirviento;
+  }
 }

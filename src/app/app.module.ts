@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './jornadas-repo/form.component';
 import { FormsModule } from '@angular/forms';
+import { ModalidadComponent } from './jornadas-repo/models/modalidad/modalidad.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import { DirvientoComponent } from './jornadas-repo/models/dirviento/dirviento.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch:'full'},
@@ -27,13 +35,21 @@ const routes: Routes = [
     FooterComponent,
     JornadasRepoComponent,
     InicioComponent,
-    FormComponent
+    FormComponent,
+    ModalidadComponent,
+    DirvientoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatToolbarModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    BrowserAnimationsModule
   ],
   providers: [JornadaService],
   bootstrap: [AppComponent]

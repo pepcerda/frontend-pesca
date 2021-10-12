@@ -1,0 +1,7 @@
+<mat-form-field>
+    <mat-select  [(value)]="dirPrevia" (selectionChange)="setDirViento($event.value)" >
+    <mat-option *ngFor="let direccion of dirviento" [value]="direccion.viewValue">
+      {{direccion.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

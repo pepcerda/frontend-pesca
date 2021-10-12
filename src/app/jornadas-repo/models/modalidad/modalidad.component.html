@@ -1,0 +1,7 @@
+<mat-form-field>
+    <mat-select [(value)]="modPrevia" (selectionChange)="setModalidad($event.value)" placeholder="Modalidad">
+    <mat-option *ngFor="let modalidad of modalidades" [value]="modalidad.viewValue">
+      {{modalidad.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

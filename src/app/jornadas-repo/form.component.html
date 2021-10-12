@@ -1,4 +1,4 @@
-<div class="card bg-dark text-white">
+<div>
   <div class="card-header">{{titulo}}</div>
   <div class="card-body">
     <form>
@@ -6,10 +6,9 @@
       <div class="form-group row">
         <label for="" class="col-form-label col-sm-2">Modalidad</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" [(ngModel)]="jornada.modalidad" name="modalidad">
+          <app-modalidad [modPrevia]="jornada.modalidad" (modalidad) = "setModalidad($event)"></app-modalidad>
         </div>
       </div>
-
       <div class="form-group row">
         <label for="" class="col-form-label col-sm-2">Fecha Salida</label>
         <div class="col-sm-6">
@@ -20,7 +19,7 @@
       <div class="form-group row">
         <label for="" class="col-form-label col-sm-2">Dirección Viento</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" [(ngModel)]="jornada.dirViento" name="dirViento">
+          <app-dirviento [dirPrevia] = "jornada.dirViento" (dirvient) = "setDirViento($event)"></app-dirviento>
         </div>
       </div>
 
@@ -69,7 +68,6 @@
 
         </div>
       </div>
-
     </form>
   </div>
 </div>
