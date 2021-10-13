@@ -2,8 +2,8 @@ export class Jornada {
 id!:number;
 createAt!:string;
 modalidad!: string;
-fechaSalida!: string;
-dirViento!: string;  
+fechaSalida!: Date;
+dirViento!: string;
 fuerzaViento!: string;
 faseLuna!: string;
 observaciones!: string;

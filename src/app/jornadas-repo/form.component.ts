@@ -59,4 +59,8 @@ export class FormComponent implements OnInit {
   public setDirViento(dirviento:string){
     this.jornada.dirViento = dirviento;
   }
+
+  public setFecha(fecha: Date){
+    this.jornada.fechaSalida = fecha;
+  }
 }

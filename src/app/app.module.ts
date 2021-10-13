@@ -19,6 +19,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { DirvientoComponent } from './jornadas-repo/models/dirviento/dirviento.component';
+import { FechasalidaComponent } from './jornadas-repo/models/fechasalida/fechasalida.component';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch:'full'},
@@ -37,7 +40,8 @@ const routes: Routes = [
     InicioComponent,
     FormComponent,
     ModalidadComponent,
-    DirvientoComponent
+    DirvientoComponent,
+    FechasalidaComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ const routes: Routes = [
     MatDialogModule,
     MatInputModule,
     MatSelectModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [JornadaService],
   bootstrap: [AppComponent]
